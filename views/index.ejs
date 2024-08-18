@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BuzzFlow</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+
+      <!-- Logo -->
+      <h1 class="company"><img class="icon" src="/images/icon.jpg" alt="" /></h1>
+      <!-- <h2 class="tagline">Your platform for sharing your thoughts and experiences</h2> -->
+        <div class="posts-container">
+
+          <!-- Iterate though all posts from array -->
+          <% for(let post of posts) { %>
+            
+            <!-- Displaying individual post fields -->
+            <div class="post">
+              <h2>@<%= post.username %></h2>
+              <div class="content"><%= post.content %></div>
+              
+
+              <!-- link to view detail of post -->
+              <div class="bottom-optns">
+                <div class="reactions">likes: <%= post.likes %></div>
+                <a class="optns" href="http://localhost:8080/posts/<%=post.userId%>"
+                  >view in detail</a
+                >
+              <!-- link to edit a post -->
+                <a
+                  class="optns"
+                  href="http://localhost:8080/posts/<%=post.userId%>/edit"
+                  >Edit</a
+                >
+                  
+                <!-- form for delete button method overriding post request -->
+                <form
+                  method="post"
+                  action="http://localhost:8080/posts/<%=post.userId%>?_method=Delete"
+                >
+                
+                  <!-- Delete Button for each post -->
+                  <button class="del-btn optns">Delete</button>
+                
+                </form>
+              </div>
+          </div>
+          <% } %>
+  
+        </div>
+       
+        <!-- Link to create a new post -->
+    <a class="btn" href="http://localhost:8080/posts/new">Create Post</a>
+  
+    </div>
+  </body>
+</html>

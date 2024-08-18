@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    
+    <div class="post">
+        <p>user Id : <%= post.userId%></p>
+        <h2> @<%= post.username %></h2>
+        <p class="contents"><%= post.content %></p>
+        <div class="reactions">likes: <%= post.likes %></div>
+      </div>
+  </body>
+</html>

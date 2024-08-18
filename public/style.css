@@ -1,0 +1,123 @@
+
+body {
+    background-color: rgb(192, 192, 227);
+    /* background-color:rgba(0, 0, 0, 0.393); */
+  }
+.container{
+    background-color: rgb(179, 179, 238);
+    width:800px;
+    height:700px;
+    margin:auto;
+    text-decoration: dashed;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25), 0 12px 24px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding:10px;
+    border-radius: 1rem;
+}
+.company{
+    background-color: aliceblue;
+    color:darkblue;
+    text-align: center;
+
+    border-radius: 20px;
+    height:90px;
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.15), 0 10px 20px 0 rgba(0,0,0,0.10);
+}
+.company:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    transform: scale(1.02);
+}
+.posts-container{
+    border-radius: 1rem;
+    height:450px;
+    padding:10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    overflow-y:auto;
+}
+.posts-container::-webkit-scrollbar {
+    width: 0px; /* Hides scrollbar */
+    background: transparent; /* Optional: makes scrollbar background transparent */
+}
+.content::-webkit-scrollbar {
+    width: 0px; /* Hides scrollbar */
+    background: transparent; /* Optional: makes scrollbar background transparent */
+}
+
+.icon{
+    height:80px;
+    width:200px;
+}
+.post {
+  background-color: rgba(78, 107, 133, 0.32);
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 20px;
+}
+.content{
+    height:50px;
+    padding:10px;
+    overflow-y: hidden;
+    border-radius: 1rem;
+}
+
+.post:hover{
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24),0 10px 20px 0 rgba(0,0,0,0.19);
+}
+.post:active{
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24),0 10px 20px 0 rgba(0,0,0,0.19);
+    transform: scale(0.95);
+    border:0.5px solid black;
+}
+.post h2{
+    margin:0px;
+   margin-top:10px;
+}
+.btn{
+    border-radius:20px;
+    background-color:rgb(64, 129, 80);
+    color:white;
+    height:50px;
+    margin:40px;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width:100px;
+    float: center;
+
+}
+.btn:hover{
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24),0 10px 20px 0 rgba(0,0,0,0.19);
+}
+.btn:active{
+    transform: scale(0.7);
+}
+.del-btn{
+    border: none;
+    background-color:  rgba(78, 107, 133, 0.32);
+    border-radius: 20px;
+    border:1px solid darkblue;
+}
+.del-btn:hover{
+    background-color: red;
+    color:white;
+}
+.bottom-optns{
+    width:100%;
+    margin-top: 10px;
+    display:flex;
+    justify-content:center;
+    padding-bottom: 20px;
+    gap:20px;
+}
+.bottom-optns a{
+    text-decoration: none;
+    color: rgb(77, 66, 191);
+}
+.optns{
+    margin-right: 2rem;
+}
